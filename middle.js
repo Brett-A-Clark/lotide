@@ -1,3 +1,6 @@
+const eqArrays = require('./eqArrays.js');
+const assertArraysEquals = require('./assertArraysEquals.js');
+
 const middle = function(array) {
   let midArray = [];
   if (array.length <= 2) {
@@ -10,6 +13,5 @@ const middle = function(array) {
   return midArray;
 };  
 
-// TEST CODE
-console.log(middle([1, 2, 3, 4, 5]));
-console.log(middle([1, 2, 3, 4, 5, 6]));
+module.exports = middle;
+
