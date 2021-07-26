@@ -1,15 +1,18 @@
-const assertArrays = function(array1, array2) {
-  let result = "";
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] === array2[i]) {
-      result = true;
-    } else {
-      result = false;
-    }
-  }
-  console.log(result);
-  return result;
-}; 
+const eqArrays = require('./eqArrays.js');
+
+
+// const assertArrays = function(array1, array2) {
+//   let result = "";
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array1[i] === array2[i]) {
+//       result = true;
+//     } else {
+//       result = false;
+//     }
+//   }
+//   console.log(result);
+//   return result;
+// }; 
 
   const assertArraysEquals = function(array1, array2) {
   let correctResult = `Assertion Passed: ${array1} === ${array2}`;
@@ -23,8 +26,5 @@ const assertArrays = function(array1, array2) {
   }
 };
 
-assertArraysEquals([1, 2, 3], [1, 2, 3]) // => true
-assertArraysEquals([1, 2, 3], [3, 2, 1]) // => false
 
-assertArraysEquals(["1", "2", "3"], ["1", "2", "3"]) // => true
-assertArraysEquals(["1", "2", "3"], ["1", "2", 3]) // => false
+module.exports = assertArraysEquals;
