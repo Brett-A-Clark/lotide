@@ -1,4 +1,6 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = require('./assertEqual');
+
+assertEqual = function(actual, expected) {
   const fact1 = actual;
   const fact2 = expected;
   if (actual === expected) {
@@ -8,12 +10,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+
 const head = function(leg) {
   return leg[0];
 };
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+module.exports = head;
 
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
